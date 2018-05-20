@@ -379,7 +379,8 @@ public:
   int lock_exclusive(string& metadata_key, timespan duration, string& owner_id);
   int unlock(string& metadata_key, string& owner_id);
 
-  int get_log_shard_id(const string& section, const string& key, int *shard_id);
+  int get_log_shard_id(const string& section, const string& key, int *shard_id,
+                       const unsigned int max_shards=0);
 };
 
 template <typename F>
